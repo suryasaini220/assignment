@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Front-End Assignment</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+
+  <!-- Assignment container -->
+  <div id="assignment" class="p-6 bg-white shadow-lg rounded-lg text-center">
+    <!-- Icon -->
+    <div class="icon-container">
+      <i class="fas fa-code text-blue-500 text-4xl mb-4"></i> <!-- FontAwesome Icon -->
+    </div>
+    <!-- Box that rotates on hover -->
+    <div id="rotate-box" class="bg-blue-500 text-white p-4 rounded-lg hover:rotate-360">
+      Hover over me!
+    </div>
+  </div>
+
+  <!-- Anime.js library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  
+  <!-- Custom script for hover animation -->
+  <script>
+    document.getElementById('rotate-box').addEventListener('mouseenter', () => {
+      anime({
+        targets: '#rotate-box',
+        rotate: '1turn',
+        duration: 1000
+      });
+    });
+  </script>
+
+</body>
+</html>
